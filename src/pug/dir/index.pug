@@ -11,7 +11,92 @@ block script
   script(src=JS_DIR + 'index.js' type='text/javascript' charset='UTF-8')
 
 block content
-  section
-    h1 自分用使い回し　mDev　
-
+  section.main-visual
+    .main-visual__cont
+      .main-visual__logo
+        img(src="assets/img/logo.png", alt="ロゴ")
+      .main-visual__subtitle
+        img(src="assets/img/subtitle.png", alt="サブタイトル")
+  section.concept
+    .concept__cont.max-width
+      h2.head Concept
+      p.text.text--center
+        | 私たちShiroは、白いお花だけを取り扱うフラワーショップです。色とりどりの花束も素敵だけれど、洗練された「白」の美しさを感じてほしい。「白」に対する愛から生まれた静寂な時間が流れる店へ、ぜひお越しください。
+      .concept__img
+        img(src="assets/img/concept.png", alt="")
+  section.works
+    .works__cont.max-width
+      h2.head Works
+      p.text.text--center
+        | オーダーメイドでのブーケ・アレンジメントのデザインのほか、ウェディングやイベントの装花なども行なっています。一人一人にあったご提案をさせていただきます。
+      .works__boxes
+        .works__box
+          img(src="assets/img/gift.png", alt="")
+          p.text.text--large Gift
+          p.text 花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
+        .works__box
+          img(src="assets/img/decoration.png", alt="")
+          p.text.text--large Decoration
+          p.text お写真を彩るお花を一輪から販売。一定期間のご契約で定期的にご自宅へ配送させていただくことも可能です。
+        .works__box
+          img(src="assets/img/wedding.png", alt="")
+          p.text.text--large Wedding
+          p.text ウエディングドレスに合わせたブーケや式場の雰囲気に合う装花をご提案。お打ち合わせの流れや回数、費用などにつきましてはお問い合わせください。
+        .works__box
+          img(src="assets/img/for.png", alt="")
+          p.text.text--large For yourself
+          p.text お部屋の雰囲気やライフスタイルをお聞きしてご自宅用の花束をご提案し、少しでも長く咲かせるコツもお教えします。花束に合った花瓶をご提案することも可能です。
+  section.florist
+    .concept__cont.max-width
+      h2.head Florist
+      p.text.text--center
+        | Shiro専属のフローリストたちをご紹介。得意の分野であなたのオーダーを最大限に叶えます。
+      .florist__boxes
+        .florist__box
+          img(src="assets/img/shiyu.png", alt="")
+          p.text.text--large Shiyu
+          p.text お花茶屋大学フラワーアレンジメント科を卒業後、さまざまな白い花を探すために世界を一周し、Shiroの創業者となる。
+        .florist__box
+          img(src="assets/img/mao.png", alt="")
+          p.text.text--large Mao
+          p.text 花の魅力に惹かれ、空間デザインの世界からフローリストの道を歩む。主に結婚式やイベントで使用するお花のディレクション担当。
+        .florist__box
+          img(src="assets/img/omichan.png", alt="")
+          p.text.text--large Omichan
+          p.text フローリスト兼ガーデナーという特殊な経歴をもつ。豊富な知識と技術でお客様のオーダーを叶える。
+  section.shop-info
+    .shop-info__cont.max-width
+      h2.head Shop infomation
+      p.text.text--center
+        | Shiroの店舗情報をご紹介します。
+      .shop-info__box
+        .shop-info--left
+          img(src="assets/img/shop-info.png", alt="")
+        .shop-info--right
+          table.text
+            tr
+              th 住所
+              td
+                | 〒810-0001
+                br
+                | 福岡県福岡市中央区天神0-0-0
+            tr
+              th 電話番号
+              td 0120-000-000
+            tr
+              th 営業時間
+              td 11:00-20:30 （定休日：水曜日）
+            tr
+              th アクセス
+              td
+                | 天神駅12a出口から徒歩6分、東京駅8b出口から徒歩12分
+  section.contact-us
+    .contact-us__cont.max-width
+      h2.head Contact us
+      p.text.text--center
+        | イベントや結婚式でご利用する装花のご相談や、フラワーアレンジメントのご予約などはこちらからお問い合わせください。
+      a(href="", class="contact-us__btn")
+        .contact-us__btn__text
+          i.far.fa-envelope
+          | お問い合わせ
 block modal

@@ -1,3 +1,22 @@
-// .footer
-
-// @media screen and (max-width: (BREAKPOINT)px)
+.footer{
+  position relative
+  width 100%
+  height 80px
+  font-family 'ヒラギノ角ゴ ProN W3', sans-serif
+  small{
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateX(-50%) translateY(-50%)
+    font-size: 16px
+  }
+}
+@media screen and (max-width: (BREAKPOINT)px){
+  footer{
+    small{
+      width: 100%
+      text-align: center
+      font-size: 22px
+    }
+  }
+}

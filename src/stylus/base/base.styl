@@ -1,9 +1,13 @@
 @import '../libs/reset.css'
+/******************************************************************
 
+base
+
+******************************************************************/
 html, body
   position relative
   min-width 960px
-  font-family 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif
+  font-family 'Poppins SemiBold', 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', '游ゴシック', YuGothic, 'メイリオ', Meiryo, sans-serif
   // font-family 'ヒラギノ明朝 ProN W3', 'Hiragino Mincho ProN', '游明朝', YuMincho, 'メイリオ', Meiryo, serif
   font-size 15px
   line-height 1
@@ -23,22 +27,261 @@ picture
   display block
   width 100%
 
-// responsive
-@media screen and (min-width: (BREAKPOINT + 1)px)
+.max-width
+  max-width 960px
+  margin 0 auto
+
+.head
+  position relative
+  text-align center
+  font-size 40px
+  letter-spacing 20
+  margin 60px
+
+  &::after
+    content ""
+    position absolute
+    left 50%
+    transform translateX(-50%)
+    bottom -30px
+    width 34px
+    height 1px
+    background-color #333
+
+.text
+  font-size 16px
+  letter-spacing 80
+  line-height 31.5px
+
+.text--center
+  text-align center
+.text--large
+  font-size 30px
+  line-height 55px !important
+/******************************************************************
+
+body
+
+******************************************************************/
+//main-visual
+.main-visual
+  position relative
+  width 100%
+  height 620px
+  background-image url(../img/main-visual.png)
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+
+  &__cont
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+
+  &__subtitle
+    margin-top 10%
+
+//concept
+.concept
+  position relative
+  width 100%
+  padding 80px 0px
+
+  &::before
+    z-index -1
+    position absolute
+    bottom 0
+    content ""
+    width 100%
+    background-color #EDEDED
+    height 280px
+
+  &__cont
+    .text--center
+      max-width 614px
+      margin 0 auto
+
+  &__img
+    height 413px
+    margin-top 50px
+    img
+      height: 100%
+      object-fit cover
+
+//works
+.works
+  padding 80px 0px
+  .text--center
+      max-width 493px
+      margin 0 auto
+
+  &__boxes
+    margin-top 50px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &__box
+    flex-basis: 420px
+    margin-bottom 5%
+  &__box:nth-child(3)
+    transform: translateY(-100px)
+  &__box:nth-child(2)
+    transform: translateY(150px)
+  &__box:nth-child(4)
+    transform: translateY(250px)
+//florist
+.florist
+  position relative
+  padding 80px 0px
+  &::before
+    z-index -1
+    position absolute
+    top 0
+    content ""
+    width 100%
+    background-color #EDEDED
+    height 535px
+
+  .text--center
+      max-width 493px
+      margin 0 auto
+
+  &__boxes
+    margin-top 50px
+    display: flex
+    justify-content: space-between
+  &__box
+    flex-basis: 300px
+    margin-bottom 5%
+    img
+      height: 400px
+      object-fit: cover
+      object-position: center
+
+//shop-info
+.shop-info
+  position relative
+  padding 80px 0px
+
+  .text--center
+      max-width 493px
+      margin 0 auto
+
+  &__box
+    margin-top 50px
+    display flex
+    justify-content: space-between
+    align-items: center//rightを中央に持ってこれる
+  &--left
+    flex-basis 50%
+    img
+      object-fit cover
+      height 330px
+  &--right
+    flex-basis 50%
+    margin-left 40px
+    font-family 'ヒラギノ角ゴ ProN W3', sans-serif
+    tr
+      display: block;
+      border-collapse: separate;  /* 表の線と線の間を空ける */
+      border-spacing: 10px;       /* 表の線と線の間の幅 */
+    td
+      padding-left: 20px
+    th
+      position relative
+      width: 120px
+      border-right: 1px solid #A0A0A0
+
+//Contact-us
+.contact-us
+  padding 80px 0px
+  background-image: url(../img/contact-us.png)
+  background-position center
+  background-repeat no-repeat
+  background-size cover
+  .text--center
+      max-width 493px
+      margin 0 auto
+  &__btn
+    position relative
+    height 82px
+    width 352px
+    display block
+    margin 5% auto
+    background-color #fff
+    border solid 1px #A0A0A0
+    transition all 0.5s
+
+    &__text
+      position absolute
+      top 50%
+      left 50%
+      transform: translate(-50%, -50%)
+      font-size: 20px
+      i
+        margin-right 10px
+
+  &__btn:hover
+    background-color black
+    color: #fff
+
+/******************************************************************
+
+responsive
+
+******************************************************************/
+
+@media screen and (min-width (BREAKPOINT + 1)px)
   .mo_op
     display inline-block
     transition (opacity 160ms ease-in-out)
     -webkit-font-smoothing antialiased
 
-    &:hover
+    &hover
       opacity 0.65
 
   .sp
     display none !important
 
-@media screen and (max-width: (BREAKPOINT)px)
+@media screen and (max-width (BREAKPOINT)px)
   html, body
     min-width 320px
 
   .pc
-    display: none !important
+    display none !important
+
+  .max-width
+    max-width 90%
+
+  //main-visual
+  .main-visual
+    height 735px
+  //concept
+  .concept
+    &__img
+      height 300px !important
+  //works
+  .works
+    &__boxes
+      flex-direction: column
+    &__box
+      width: 80%
+      transform: none !important
+    &__box:nth-child(2n)
+      margin-left: auto
+  //florist
+  .florist
+    &__boxes
+      flex-direction column
+    &__box
+      width: 100%
+  //shop-info
+  .shop-info
+    &__box
+      position relative//モバイルでは左寄せするため
+      flex-direction column
+      height 600px
+      table
+        position absolute//モバイルでは左寄せするため
+        left 0

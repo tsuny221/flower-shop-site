@@ -110,3 +110,16 @@ $(() => {
   //   opened_classname: 'mModal-opened'
   // })
 })
+
+
+//ヘッダーの色変え
+$(window).scroll(function () {
+
+  $(this).scrollTop();
+  if ($(this).scrollTop() > $(".main-visual").height()) {
+    $("span").css('background-color', 'black');
+    $('.header__logo').children('img').attr('src', 'assets/img/logo-black.png');
+  } else {
+    $("span").css('background-color', 'white');
+    $('.header__logo').children('img').attr('src', 'assets/img/logo.png');
+  }});
