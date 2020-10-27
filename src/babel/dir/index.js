@@ -111,7 +111,10 @@ $(() => {
   // })
 })
 
-
+  //ハンバーガーメニュー
+$("#mobile-menu").on("click", function () {
+  $("body").toggleClass("menu-open");
+});
 //ヘッダーの色変え
 $(window).scroll(function () {
 
