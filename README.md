@@ -1,16 +1,19 @@
-# mDev
-Template for Web Development
-version 4.0.0
+# Shiro
+
+ps データからコーディング練習
 
 ## Language
+
 - Pug
 - Stylus
 - Babel
 
 ## Tools
+
 - gulp
 - webpack
 
 ## Command
+
 - build
-`gulp`
+  `gulp`
